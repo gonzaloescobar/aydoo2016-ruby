@@ -8,5 +8,10 @@ describe 'factores_primos' do
     expect(calculator.breakPrimes(90)).to eq '2 3 3 5 '
   end
 
+  it 'should return 2 2 2 3 3 5 when descompose prime numbers of 360' do
+    calculator = FactoresPrimos.new
+    expect(calculator.breakPrimes(360)).to eq "2 2 2 3 3 5 "
+  end
+
 end
 
