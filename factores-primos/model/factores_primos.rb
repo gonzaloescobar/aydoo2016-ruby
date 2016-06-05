@@ -11,6 +11,8 @@ class FactoresPrimos
     				result += i.to_s + " "
     			end	
     		end
+  		else
+  			result = number.to_s + " "
   		end
     result
 	end
