@@ -1,19 +1,18 @@
 class FactoresPrimos
 
-  def breakPrimes(number)
-    	result = ""
-    	originalNumber = number
+  def descomponerNumerosPrimos(numero)
+    resultado = Array.new
     
-		if(number % 2 == 0)
-    		for i in 2..number
-    			while number%i==0
-    				number = number / i
-    				result += i.to_s + " "
-    			end	
-    		end
-  		else
-  			result = number.to_s + " "
-  		end
-    result
-	end
+	if(numero % 2 == 0)
+      for i in 2..numero
+        while numero%i==0
+    	  numero = numero / i
+    	  resultado << i.to_s
+    	end	
+      end
+  	else
+  	  resultado[0] = numero.to_s
+  	end
+    resultado
+  end
 end

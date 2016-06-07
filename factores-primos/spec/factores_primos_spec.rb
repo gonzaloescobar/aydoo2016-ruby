@@ -3,25 +3,26 @@ require_relative '../model/factores_primos'
 
 describe 'factores_primos' do
 
-  it 'should return 2 3 3 5 when descompose prime numbers of 90' do
-    calculator = FactoresPrimos.new
-    expect(calculator.breakPrimes(90)).to eq '2 3 3 5 '
+  it 'deberia devolver un arreglo con 2 3 3 5 cuando descomponerNumerosPrimos 90' do
+    factorizador = FactoresPrimos.new
+  expect(factorizador.descomponerNumerosPrimos(90)).to eq ["2","3","3","5"]
   end
 
-  it 'should return 2 2 2 3 3 5 when descompose prime numbers of 360' do
-    calculator = FactoresPrimos.new
-    expect(calculator.breakPrimes(360)).to eq "2 2 2 3 3 5 "
+  it 'deberia devolver un arreglo con 2 2 2 3 3 5 cuando descomponerNumerosPrimos 360' do
+    factorizador = FactoresPrimos.new
+  expect(factorizador.descomponerNumerosPrimos(360)).to eq ["2","2","2","3","3","5"]
   end
 
-  it 'should return 2 when descompose prime numbers of 2' do
-    calculator = FactoresPrimos.new
-    expect(calculator.breakPrimes(2)).to eq "2 "
+  it 'deberia devolver un arreglo con 2 cuando descomponerNumerosPrimos 2' do
+    factorizador = FactoresPrimos.new
+  expect(factorizador.descomponerNumerosPrimos(2)).to eq ["2"]
   end
 
-  it 'should return the original number when descompose prime numbers of number can not be broken' do
-    calculator = FactoresPrimos.new
-    expect(calculator.breakPrimes(3)).to eq "3 "
+  it 'deberia devolver un arreglo con 7 cuando descomponerNumerosPrimos 7' do
+    factorizador = FactoresPrimos.new
+  expect(factorizador.descomponerNumerosPrimos(7)).to eq ["7"]
   end
+
 
 end
 
