@@ -22,6 +22,15 @@ class ControladorDeSalida
     return resultado
   end  
 
+  def imprimir_en_consola textoAImprimir
+    print "#{textoAImprimir}\n"
+  end
+
+  def imprimir_en_archivo (nombreDeArchivo, textoAImprimir)
+    File.open(nombreDeArchivo, 'w') do |f|
+      f.puts textoAImprimir
+    end
+  end
 =begin
   def formatear (numero, formato, numeroFactorizado, orden)
   	resultado = "" 

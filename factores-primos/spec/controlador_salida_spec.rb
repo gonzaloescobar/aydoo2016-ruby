@@ -33,6 +33,14 @@ describe 'controlador_salida' do
   expect(formateador.formatearQuiet(["2","3","3","5"],"des")).to eq "5\n3\n3\n2\n"
   end
 
+   it 'deberia imprimir 5\n3\n3\n2 en archivo en formato Quiet' do
+    formateador = ControladorDeSalida.new
+  formateador.imprimir_en_archivo("salida.txt", "5\n3\n3\n2\n")
+  end
 
+  it 'deberia imprimir en archivo Factores primos 90: 5 3 3 2' do
+    formateador = ControladorDeSalida.new
+  formateador.imprimir_en_archivo("salidaPretty.txt", "Factores primos 90: 5 3 3 2 ")
+  end
 
 end
