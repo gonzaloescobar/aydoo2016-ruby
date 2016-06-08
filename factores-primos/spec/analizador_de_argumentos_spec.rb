@@ -32,5 +32,10 @@ describe 'analizador_de_argumentos' do
   expect(analizador.formato).to eq "quiet"
   end
 
+  it 'deberia devolver el orden asc cuando analizarArgumentos con orden asc' do
+    analizador = AnalizadorDeArgumentos.new ["90", "--sort:asc"]
+    analizador.analizarArgumentos
+  expect(analizador.orden).to eq "asc"
+  end
 
 end
