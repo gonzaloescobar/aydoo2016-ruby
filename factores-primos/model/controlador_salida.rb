@@ -31,17 +31,17 @@ class ControladorDeSalida
       f.puts textoAImprimir
     end
   end
-=begin
+
   def formatear (numero, formato, numeroFactorizado, orden)
   	resultado = "" 
-  	case formato.downcase
-  	  when "--format=pretty"
-  	  	resultado = fomatearPretty(numero, numeroFactorizado, orden)
-  	  when "--format=quiet"
+  	case formato
+  	  when "pretty"
+  	  	resultado = formatearPretty(numero, numeroFactorizado, orden)
+  	  when "quiet"
   	  	resultado = formatearQuiet(numeroFactorizado, orden)
   	  else resultado = "Formato no aceptado. Las opciones posibles son: pretty o quiet."
   	end
     return resultado
   end  
-=end
+
 end

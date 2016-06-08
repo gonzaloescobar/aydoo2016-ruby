@@ -1,4 +1,4 @@
-class FactoresPrimos
+class FactorizadorPrimo
 
   def descomponerNumerosPrimos(numero)
     resultado = Array.new

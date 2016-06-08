@@ -40,7 +40,7 @@ describe 'controlador_salida' do
 
   it 'deberia imprimir en archivo Factores primos 90: 5 3 3 2' do
     formateador = ControladorDeSalida.new
-  formateador.imprimir_en_archivo("salidaPretty.txt", "Factores primos 90: 5 3 3 2 ")
+  formateador.imprimir_en_archivo("salida.txt", "Factores primos 90: 5 3 3 2 ")
   end
 
 end

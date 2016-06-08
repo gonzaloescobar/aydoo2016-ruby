@@ -44,4 +44,10 @@ describe 'analizador_de_argumentos' do
   expect(analizador.orden).to eq "des"
   end
 
+  it 'deberia devolver el nombreDelArchivo salida.txt cuando analizarArgumentos especifica nombre' do
+    analizador = AnalizadorDeArgumentos.new ["90", "--sort:des", "--output-file=salida.txt"]
+    analizador.analizarArgumentos
+  expect(analizador.nombreDeArchivo).to eq "salida.txt"
+  end
+
 end

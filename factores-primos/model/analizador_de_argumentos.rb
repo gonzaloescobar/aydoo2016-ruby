@@ -9,6 +9,9 @@ class AnalizadorDeArgumentos
   def initialize(argumentos)
     @numero = argumentos[0].to_i
     @argumentos = argumentos
+    @formato= "pretty"
+    @orden= ""
+    @nombreDeArchivo= ""
   end
 
   def analizarArgumentos
