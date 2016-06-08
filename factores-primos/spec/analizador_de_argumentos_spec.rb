@@ -14,4 +14,18 @@ describe 'analizador_de_argumentos' do
   expect(analizador.formato).to eq "pretty"
   end
 
+  it 'deberia devolver el formato quiet cuando analizarArgumentos' do
+    analizador = AnalizadorDeArgumentos.new ["90", "--format=quiet"]
+    analizador.analizarArgumentos
+  expect(analizador.formato).to eq "quiet"
+  end
+
+  it 'deberia devolver el formato quiet cuando analizarArgumentos con quIet' do
+    analizador = AnalizadorDeArgumentos.new ["90", "--format=quIet"]
+    analizador.analizarArgumentos
+  expect(analizador.formato).to eq "quiet"
+  end
+
+  
+
 end

@@ -14,13 +14,13 @@ class AnalizadorDeArgumentos
   def analizarArgumentos
     @argumentos.each do |argumentoActual|
       if argumentoActual.start_with?("--format=")
-      	@formato = argumentoActual.partition('=').last
+      	@formato = (argumentoActual.partition('=')).last.downcase
       end
       if argumentoActual.start_with?("--sort:")
-      	@orden = argumentoActual.partition(':').last
+      	@orden = argumentoActual.partition(':').last.downcase
       end
       if argumentoActual.start_with?("--output-file=")
-      	@nombreDeArchivo = argumentoActual.partition('=').last
+      	@nombreDeArchivo = argumentoActual.partition('=').last.downcase
       end		
     end	
   end 
