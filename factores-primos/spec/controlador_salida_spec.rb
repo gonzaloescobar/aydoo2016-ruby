@@ -25,7 +25,12 @@ describe 'controlador_salida' do
 
   it 'deberia devolver 5\n3\n3\n2  cuando formatearQuiet 90' do
     formateador = ControladorDeSalida.new
-  expect(formateador.formatearQuiet(["2","3","3","5"])).to eq "5\n3\n3\n2\n"
+  expect(formateador.formatearQuiet(["2","3","3","5"],"")).to eq "5\n3\n3\n2\n"
+  end
+
+  it 'deberia devolver 5\n3\n3\n2  cuando formatearQuiet 90 con orden des' do
+    formateador = ControladorDeSalida.new
+  expect(formateador.formatearQuiet(["2","3","3","5"],"des")).to eq "5\n3\n3\n2\n"
   end
 
 

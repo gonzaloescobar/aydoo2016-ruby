@@ -11,9 +11,11 @@ class ControladorDeSalida
     return "Factores primos " + numero.to_s + ": " + resultado
   end
 
-  def formatearQuiet (numeroDescompuesto)
+  def formatearQuiet (numeroDescompuesto, orden)
   	resultado = "" 
-  	numeroDescompuesto.reverse!
+  	if orden.eql?("des") || orden.eql?("")
+  	  numeroDescompuesto.reverse!
+  	end
   	numeroDescompuesto.each do |numeroActual|
   	  resultado += "#{numeroActual}" + "\n"
     end
